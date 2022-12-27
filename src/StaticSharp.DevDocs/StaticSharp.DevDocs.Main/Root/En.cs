@@ -7,30 +7,22 @@ using System.Threading.Tasks;
 namespace StaticSharp.DevDocs.Main.Root
 {
     [Representative]
-    public partial class En : Page
+    public partial class En : DevDocsPageTemplate
     {
-        public override string PageLanguage => Node.Language.ToString().ToLower();
+        public override Inlines? Description => $"Home page";
 
-        public override Inlines? Description => $"<Test description>";
-
-        public override string Title
-        {
-            get
-            {
-                var n = GetType().Namespace;
-                return n[(n.LastIndexOf('.') + 1)..].Replace('_', ' ');
-            }
-        }
+        //public override Block? Footer => new Paragraph($"qwerty");
 
         protected override void Setup(Context context)
         {
             base.Setup(context);
         }
 
-        public override Block? MainVisual => new Paragraph("<Main text>");
+        //public override Block? MainVisual => new Paragraph("<Main text>");
 
-        protected override Blocks BodyContent => new Blocks {
-            { "MainVisual", MainVisual }
+        public override Blocks? Content => new ()
+        { 
+            $"Start from {Node.GettingStarted}"
         };
     }
 }

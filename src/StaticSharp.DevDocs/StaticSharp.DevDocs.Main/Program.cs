@@ -34,7 +34,6 @@ namespace StaticSharp.DevDocs.Main
             await new StaticSharp.Server(
                 new DefaultMultilanguagePageFinder<Language>((language) => new αRoot(language)),
                 new DefaultMultilanguageNodeToPath<Language>()
-
                 ).RunAsync();
         }
 
