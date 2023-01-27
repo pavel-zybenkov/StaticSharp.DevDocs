@@ -21,8 +21,15 @@ namespace StaticSharp.DevDocs.Main.Root
         //public override Block? MainVisual => new Paragraph("<Main text>");
 
         public override Blocks? Content => new ()
-        { 
-            $"Start from {Node.GettingStarted}"
+        {
+            $"Start from {Node.GettingStarted}",
+            new Flipper
+            {
+                First = new Paragraph("First block"),
+                Second = new Paragraph("Second block"),
+                Children = { "Flipper child" },
+                X = 30
+            }
         };
     }
 }

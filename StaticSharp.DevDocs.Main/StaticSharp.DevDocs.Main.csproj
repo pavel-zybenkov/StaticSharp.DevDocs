@@ -8,10 +8,8 @@
   </PropertyGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="MixinGenerator" Version="1.0.0" />
-		<PackageReference Include="StaticSharp" Version="1.0.0" />
-		<PackageReference Include="StaticSharpSever" Version="1.0.0" />
-		<PackageReference Include="StaticSharpSourceGenerator" Version="1.0.0" />
+		<PackageReference Include="StaticSharp.Core" Version="0.1.0" />
+		<PackageReference Include="StaticSharp.StaticSharpSourceGenerator" Version="0.1.0" />
 	</ItemGroup>
 	
 </Project>

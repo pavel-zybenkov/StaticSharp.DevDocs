@@ -14,7 +14,7 @@ namespace StaticSharp.DevDocs.Main.Root.GettingStarted
         public override Inlines? Description => $"Creating a new web site with StaticSharp";
 
         public override Blocks? Content => new() 
-        { 
+        {
             $"Here are simple steps to create new site with StaticSharp:",
             $"1. Create new console application with {DefaultStyle.Code("dotnet new console")}",
             $"2. Reference the following nuget packages: MixinGenerator, StaticSharp, StaticSharpSever, StaticSharpSourceGenerator",
@@ -44,7 +44,7 @@ namespace StaticSharp.DevDocs.Main.Root.GettingStarted
             new Image("GettingStartedScreenshot1.png")
             {
                 Width = 400
-            },
+            }.CenterHorizontally(),
             $"TODO: all above likely will be replaced with dotnet project template"
         };
     }
